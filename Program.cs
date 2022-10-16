@@ -18,16 +18,13 @@ public class sqlite
                 {
                     var insertCmd = connection.CreateCommand();
 
-                    insertCmd.CommandText = "INSERT FirstName INTO Person VALUES('LAGUNITAS')";
-                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('LAGUNITAS')";
                     insertCmd.ExecuteNonQuery();
 
-                    insertCmd.CommandText = "INSERT FirstName Person VALUES('JAI ALAI')";
-                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('JAI ALAI')";
                     insertCmd.ExecuteNonQuery();
 
-                    insertCmd.CommandText = "INSERT FirstName Person VALUES('RANGER')";
-                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('RANGER')";
                     insertCmd.ExecuteNonQuery();
 
                     transaction.Commit();
@@ -35,7 +32,7 @@ public class sqlite
       
        var selectCmd = dbConnection.CreateCommand();
 
-                selectCmd.CommandText = "SELECT FirstName FROM Person";
+                selectCmd.CommandText = "SELECT data FROM Person";
 
                 using (var reader = selectCmd.ExecuteReader())
                 {
