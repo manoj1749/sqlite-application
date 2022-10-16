@@ -1317,11 +1317,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gar00\\OneDrive\\Desktop\\.NET\\sqlite\\sqlite\\sqlite.csproj",
+      "projectUniqueName": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
       "projectName": "sqlite",
-      "projectPath": "C:\\Users\\gar00\\OneDrive\\Desktop\\.NET\\sqlite\\sqlite\\sqlite.csproj",
+      "projectPath": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
       "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gar00\\OneDrive\\Desktop\\.NET\\sqlite\\sqlite\\obj\\",
+      "outputPath": "C:\\sqlite-application-1\\sqlite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",

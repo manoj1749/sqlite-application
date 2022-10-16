@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LtiPFbUm/Ao88L78a9uzq9G0VXWLAVfdbf+0hPgCwVAxYXwInvwnKr93Ra2llCktPgIQzfZ2lV9XH4xTBWLXPQ==",
+  "dgSpecHash": "WiTKQ+LXTcHQYyxaI4AR47VqUAhHyiK3JM6iXQzcReAO3p+alNhNhMaaCsFM0SNhABFgLVJzG7XoxjihXcIMEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gar00\\OneDrive\\Desktop\\.NET\\sqlite\\sqlite\\sqlite.csproj",
+  "projectFilePath": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gar00\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\gar00\\.nuget\\packages\\hazzik.system.data.sqlite.core\\1.0.109-a1\\hazzik.system.data.sqlite.core.1.0.109-a1.nupkg.sha512",

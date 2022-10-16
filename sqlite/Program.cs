@@ -13,7 +13,13 @@ public class sqlite
         //dbConnection.Open();
         //Console.WriteLine("SQL Started");
         openConnection();
-      
+      using (var transaction = dbConnection.BeginTransaction())
+{
+    var insertCmd = dbConnection.CreateCommand();
+    insertCmd.CommandText = "INSERT INTO Person VALUES(4,'LAGUNITAS','IPA')";
+    insertCmd.ExecuteNonQuery();
+    transaction.Commit();
+}
        var selectCmd = dbConnection.CreateCommand();
 
                 selectCmd.CommandText = "SELECT FirstName FROM Person";
