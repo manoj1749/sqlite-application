@@ -13,45 +13,36 @@ public class sqlite
         //dbConnection.Open();
         //Console.WriteLine("SQL Started");
         openConnection();
+        
+        using (var transaction = connection.BeginTransaction())
+                {
+                    var insertCmd = connection.CreateCommand();
 
-        dataWriting();
-        dataReading();
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('LAGUNITAS')";
+                    insertCmd.ExecuteNonQuery();
+
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('JAI ALAI')";
+                    insertCmd.ExecuteNonQuery();
+
+                    insertCmd.CommandText = "INSERT data INTO Person VALUES('RANGER')";
+                    insertCmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+                }
+      
+       var selectCmd = dbConnection.CreateCommand();
+
+                selectCmd.CommandText = "SELECT data FROM Person";
+
+                using (var reader = selectCmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var message = reader.GetString(0);
+                        Console.WriteLine(message);
+                    }
+                } 
         closeConnection();
-    }
-
-    private void dataWriting()
-    {
-        using (var transaction = dbConnection.BeginTransaction())
-        {
-            var insertCmd = dbConnection.CreateCommand();
-
-            insertCmd.CommandText = "INSERT data INTO Person VALUES('LAGUNITAS')";
-            insertCmd.ExecuteNonQuery();
-
-            insertCmd.CommandText = "INSERT data INTO Person VALUES('JAI ALAI')";
-            insertCmd.ExecuteNonQuery();
-
-            insertCmd.CommandText = "INSERT data INTO Person VALUES('RANGER')";
-            insertCmd.ExecuteNonQuery();
-
-            transaction.Commit();
-        }
-    }
-
-    private void dataReading()
-    {
-        var selectCmd = dbConnection.CreateCommand();
-
-        selectCmd.CommandText = "SELECT data FROM Person";
-
-        using (var reader = selectCmd.ExecuteReader())
-        {
-            while (reader.Read())
-            {
-                var message = reader.GetString(0);
-                Console.WriteLine(message);
-            }
-        }
     }
 
     private void openConnection()
@@ -80,10 +71,10 @@ public class sqlite
 }
 public class Program
 {
-    // Uncomment the following line to resolve.
-    static void Main()
-    {
-        var instance = new sqlite();
-        instance.StartSQL();
-    }
+   // Uncomment the following line to resolve.
+ static void Main() 
+   {
+    var instance = new sqlite();
+    instance.StartSQL();
+   }
 }
