@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SQLite;
 
 public class sqlite
@@ -18,13 +18,16 @@ public class sqlite
                 {
                     var insertCmd = connection.CreateCommand();
 
-                    insertCmd.CommandText = "INSERT FirstName INTO Person VALUES('LAGUNITAS IPA')";
+                    insertCmd.CommandText = "INSERT FirstName INTO Person VALUES('LAGUNITAS')";
+                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
                     insertCmd.ExecuteNonQuery();
 
-                    insertCmd.CommandText = "INSERT INTO Person VALUES('JAI ALAI IPA')";
+                    insertCmd.CommandText = "INSERT FirstName Person VALUES('JAI ALAI')";
+                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
                     insertCmd.ExecuteNonQuery();
 
-                    insertCmd.CommandText = "INSERT INTO Person VALUES('RANGER IPA')";
+                    insertCmd.CommandText = "INSERT FirstName Person VALUES('RANGER')";
+                    insertCmd.CommandText = "INSERT LastName INTO Person VALUES('IPA')";
                     insertCmd.ExecuteNonQuery();
 
                     transaction.Commit();
