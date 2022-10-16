@@ -13,6 +13,22 @@ public class sqlite
         //dbConnection.Open();
         //Console.WriteLine("SQL Started");
         openConnection();
+        
+        using (var transaction = connection.BeginTransaction())
+                {
+                    var insertCmd = connection.CreateCommand();
+
+                    insertCmd.CommandText = "INSERT FirstName INTO Person VALUES('LAGUNITAS IPA')";
+                    insertCmd.ExecuteNonQuery();
+
+                    insertCmd.CommandText = "INSERT INTO Person VALUES('JAI ALAI IPA')";
+                    insertCmd.ExecuteNonQuery();
+
+                    insertCmd.CommandText = "INSERT INTO Person VALUES('RANGER IPA')";
+                    insertCmd.ExecuteNonQuery();
+
+                    transaction.Commit();
+                }
       
        var selectCmd = dbConnection.CreateCommand();
 
