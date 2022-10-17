@@ -1,0 +1,15 @@
+C:\Users\manoj\Desktop\sql_server_client\client\bin\Debug\net6.0-windows\client.exe
+C:\Users\manoj\Desktop\sql_server_client\client\bin\Debug\net6.0-windows\client.deps.json
+C:\Users\manoj\Desktop\sql_server_client\client\bin\Debug\net6.0-windows\client.runtimeconfig.json
+C:\Users\manoj\Desktop\sql_server_client\client\bin\Debug\net6.0-windows\client.dll
+C:\Users\manoj\Desktop\sql_server_client\client\bin\Debug\net6.0-windows\client.pdb
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.csproj.AssemblyReference.cache
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.AssemblyInfoInputs.cache
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.AssemblyInfo.cs
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.csproj.CoreCompileInputs.cache
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.dll
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\refint\client.dll
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.pdb
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.genruntimeconfig.cache
+C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\ref\client.dll

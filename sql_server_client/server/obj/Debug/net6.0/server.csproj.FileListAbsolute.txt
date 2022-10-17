@@ -1,0 +1,15 @@
+C:\Users\manoj\Desktop\sql_server_client\server\bin\Debug\net6.0\server.exe
+C:\Users\manoj\Desktop\sql_server_client\server\bin\Debug\net6.0\server.deps.json
+C:\Users\manoj\Desktop\sql_server_client\server\bin\Debug\net6.0\server.runtimeconfig.json
+C:\Users\manoj\Desktop\sql_server_client\server\bin\Debug\net6.0\server.dll
+C:\Users\manoj\Desktop\sql_server_client\server\bin\Debug\net6.0\server.pdb
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.csproj.AssemblyReference.cache
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.AssemblyInfoInputs.cache
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.AssemblyInfo.cs
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.csproj.CoreCompileInputs.cache
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.dll
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\refint\server.dll
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.pdb
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\server.genruntimeconfig.cache
+C:\Users\manoj\Desktop\sql_server_client\server\obj\Debug\net6.0\ref\server.dll
