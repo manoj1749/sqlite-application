@@ -16,7 +16,7 @@ public class sqlite
       using (var transaction = dbConnection.BeginTransaction())
 {
     var insertCmd = dbConnection.CreateCommand();
-    insertCmd.CommandText = "INSERT INTO Person VALUES(4,'LAGUNITAS','IPA')";
+    insertCmd.CommandText = "INSERT INTO Person VALUES('LAGUNITAS','IPA')";
     insertCmd.ExecuteNonQuery();
     transaction.Commit();
 }

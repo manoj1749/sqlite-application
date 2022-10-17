@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Numerics;
+using System.Data.SQLite;
 
 namespace appgui;
 
@@ -18,6 +19,9 @@ public class Form1 : Form
     public Button button2;
     public TextBox textInputTextBox;
     public Button textInputeButton;
+    private static string dbCommand = "Data Source=DemoDB.db;Version=3;New=False;Compress=True;";
+    private static SQLiteConnection dbConnection = new SQLiteConnection(dbCommand);
+    private static SQLiteCommand Command = new SQLiteCommand("", dbConnection);
     //public bool license_valid;
     //public MainMenu Menu;
     public Form1()
@@ -47,13 +51,7 @@ public class Form1 : Form
     private void license_click(object sender, EventArgs e)
     {
 
-        if (String.IsNullOrEmpty(textInputTextBox.Text))
-        {
-            MessageBox.Show("Please enter a valid license key");
-            return;
-        }
-        else if (Convert.ToBase64String(Encoding.ASCII.GetBytes(textInputTextBox.Text)) == "MTIzNDcyMzA5NTcyMzkwNTM=")
-        {
+        
             var ip = "127.0.0.1";
             byte[] msg = Encoding.ASCII.GetBytes("1");
             //MessageBox.Show("1");
@@ -69,6 +67,30 @@ public class Form1 : Form
             Sock.Connect(endPoint);
             //MessageBox.Show(endPoint.ToString());
             //MessageBox.Show("5");
+             Console.WriteLine("Starting SQL");
+        //dbConnection.Open();
+        //Console.WriteLine("SQL Started");
+        openConnection();
+      using (var transaction = dbConnection.BeginTransaction())
+{
+    var insertCmd = dbConnection.CreateCommand();
+    insertCmd.CommandText = "INSERT INTO Person VALUES('LAGUNITAS','IPA')";
+    insertCmd.ExecuteNonQuery();
+    transaction.Commit();
+}
+       var selectCmd = dbConnection.CreateCommand();
+
+                selectCmd.CommandText = "SELECT FirstName FROM Person";
+
+                using (var reader = selectCmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var message = reader.GetString(0);
+                        Console.WriteLine(message);
+                    }
+                } 
+        closeConnection();
             Sock.Send(msg, msg.Length, 0);
             byte[] buffer = new byte[1024];
             int recieved = Sock.Receive(buffer);
@@ -78,12 +100,7 @@ public class Form1 : Form
             //MessageBox.Show("6");
             Sock.Close();
             return;
-        }
-        else
-        {
-            MessageBox.Show("Please enter a valid license key");
-            return;
-        }
+        
     }
 }
 
