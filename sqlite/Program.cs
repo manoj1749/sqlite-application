@@ -13,25 +13,25 @@ public class sqlite
         //dbConnection.Open();
         //Console.WriteLine("SQL Started");
         openConnection();
-      using (var transaction = dbConnection.BeginTransaction())
-{
-    var insertCmd = dbConnection.CreateCommand();
-    insertCmd.CommandText = "INSERT INTO Person VALUES('LAGUNITAS','IPA')";
-    insertCmd.ExecuteNonQuery();
-    transaction.Commit();
-}
-       var selectCmd = dbConnection.CreateCommand();
+        using (var transaction = dbConnection.BeginTransaction())
+        {
+            var insertCmd = dbConnection.CreateCommand();
+            insertCmd.CommandText = "INSERT INTO Person VALUES('LAGUNITAS','IPA')";
+            insertCmd.ExecuteNonQuery();
+            transaction.Commit();
+        }
+        var selectCmd = dbConnection.CreateCommand();
 
-                selectCmd.CommandText = "SELECT FirstName FROM Person";
+        selectCmd.CommandText = "SELECT FirstName FROM Person";
 
-                using (var reader = selectCmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        var message = reader.GetString(0);
-                        Console.WriteLine(message);
-                    }
-                } 
+        using (var reader = selectCmd.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                var message = reader.GetString(0);
+                Console.WriteLine(message);
+            }
+        }
         closeConnection();
     }
 
@@ -61,10 +61,10 @@ public class sqlite
 }
 public class Program
 {
-   // Uncomment the following line to resolve.
- static void Main() 
-   {
-    var instance = new sqlite();
-    instance.StartSQL();
-   }
+    // Uncomment the following line to resolve.
+    static void Main()
+    {
+        var instance = new sqlite();
+        instance.StartSQL();
+    }
 }
