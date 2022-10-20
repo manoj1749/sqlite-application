@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\manoj\\.nuget\\packages\\": {}
+    "C:\\Users\\gar00\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manoj\\Desktop\\sql_server_client\\server\\server.csproj",
+      "projectUniqueName": "C:\\sqlite-application-1\\sql_server_client\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\Users\\manoj\\Desktop\\sql_server_client\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\manoj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manoj\\Desktop\\sql_server_client\\server\\obj\\",
+      "projectPath": "C:\\sqlite-application-1\\sql_server_client\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
+      "outputPath": "C:\\sqlite-application-1\\sql_server_client\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\manoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

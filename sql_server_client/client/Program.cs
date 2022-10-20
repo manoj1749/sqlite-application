@@ -80,18 +80,19 @@ public class Form1 : Form
         var selectCmd = dbConnection.CreateCommand();
 
         selectCmd.CommandText = "SELECT FirstName FROM Person";
-        string[] names;
+        string msg1;
         using (var reader = selectCmd.ExecuteReader())
         {
             while (reader.Read())
             {
                 var message = reader.GetString(0);
-                names = new string[] { message };
+                msg1 = reader.GetString(0);
+               // names = new string[] { message };
                 Console.WriteLine(message);
             }
         }
-        Console.WriteLine(names);
-        byte[] msg = Encoding.ASCII.GetBytes(names);
+        //Console.WriteLine(names.ToString());
+        byte[] msg = Encoding.ASCII.GetBytes(msg1);
         Sock.Send(msg, msg.Length, 0);
         byte[] buffer = new byte[1024];
         int recieved = Sock.Receive(buffer);

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manoj\\Desktop\\sql_server_client\\client\\client.csproj": {}
+    "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manoj\\Desktop\\sql_server_client\\client\\client.csproj": {
+    "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manoj\\Desktop\\sql_server_client\\client\\client.csproj",
+        "projectUniqueName": "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj",
         "projectName": "client",
-        "projectPath": "C:\\Users\\manoj\\Desktop\\sql_server_client\\client\\client.csproj",
-        "packagesPath": "C:\\Users\\manoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manoj\\Desktop\\sql_server_client\\client\\obj\\",
+        "projectPath": "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj",
+        "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
+        "outputPath": "C:\\sqlite-application-1\\sql_server_client\\client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
