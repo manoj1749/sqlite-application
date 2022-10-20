@@ -13,3 +13,11 @@ C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\refint\
 C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.pdb
 C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\client.genruntimeconfig.cache
 C:\Users\manoj\Desktop\sql_server_client\client\obj\Debug\net6.0-windows\ref\client.dll
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.csproj.AssemblyReference.cache
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.AssemblyInfoInputs.cache
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.AssemblyInfo.cs
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.csproj.CoreCompileInputs.cache
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.dll
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\refint\client.dll
+C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.pdb
