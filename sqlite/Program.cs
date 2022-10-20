@@ -32,6 +32,7 @@ public class sqlite
                 Console.WriteLine(message);
             }
         }
+        dbConnection.ChangePassword("mypassword");
         closeConnection();
     }
 
