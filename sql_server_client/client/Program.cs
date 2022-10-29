@@ -52,18 +52,18 @@ public class Form1 : Form
     {
 
 
-        var ip = "127.0.0.1";
+        //var ip = "127.0.0.1";
         //MessageBox.Show("1");
-        IPAddress address = IPAddress.Parse(ip);
+        //IPAddress address = IPAddress.Parse(ip);
         //MessageBox.Show(ip);
         //MessageBox.Show(address.ToString());
         //MessageBox.Show("2");
-        IPEndPoint endPoint = new IPEndPoint(address, 8080);
+        //IPEndPoint endPoint = new IPEndPoint(address, 8080);
         //MessageBox.Show(endPoint.ToString());
         //MessageBox.Show("3");
-        Socket Sock = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+        //Socket Sock = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
         //MessageBox.Show("4");
-        Sock.Connect(endPoint);
+        //Sock.Connect(endPoint);
         //MessageBox.Show(endPoint.ToString());
         //MessageBox.Show("5");
         Console.WriteLine("Starting SQL");
@@ -79,18 +79,17 @@ public class Form1 : Form
         }
         var selectCmd = dbConnection.CreateCommand();
 
-        selectCmd.CommandText = "SELECT FirstName FROM Person";
+        selectCmd.CommandText = "SELECT FirstName LastName FROM Person";
         //string msg1;
-        //using (var reader = selectCmd.ExecuteReader())
-        //{
-        //    while (reader.Read())
-        //    {
-        //        var message = reader.GetString(0);
-        //        msg1 = reader.GetString(0);
-        //       // names = new string[] { message };
-        //        Console.WriteLine(message);
-        //    }
-        //}
+        using (var reader = selectCmd.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                var message = reader.GetString(0);
+                msg1 = reader.GetString(0);
+                //names = new string[] { message };
+                Console.WriteLine(message);
+            }
         var reader = selectCmd.ExecuteReader(); 
         reader.Read();
         byte[] msg = Encoding.ASCII.GetBytes(reader.GetString(0));
