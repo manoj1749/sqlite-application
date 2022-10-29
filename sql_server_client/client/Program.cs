@@ -79,17 +79,32 @@ public class Form1 : Form
         }
         var selectCmd = dbConnection.CreateCommand();
 
-        selectCmd.CommandText = "SELECT FirstName LastName FROM Person";
-        //string msg1;
+        selectCmd.CommandText = "SELECT FirstName FROM Person";
+        selectCmd1.CommandText = "SELECT LastName FROM Person";
+        string msg1;
         using (var reader = selectCmd.ExecuteReader())
         {
-            while (reader.Read())
+            using (var reader1 = selectCmd1.ExecuteReader())
             {
-                var message = reader.GetString(0);
-                msg1 = reader.GetString(0);
-                //names = new string[] { message };
-                Console.WriteLine(message);
+                while (reader.Read() && reader1.Read())
+                {
+                    var message = reader.GetString(0);
+                    var message1 = reader1.GetString(0);
+                    msg1 = message + " " + message1;
+                    Console.WriteLine(msg1);
+                }
+            
             }
+        }
+        //{
+        //    while (reader.Read())
+        //    {
+        //        var message = reader.GetString(0);
+        //        msg1 = reader.GetString(0);
+        //       // names = new string[] { message };
+        //        Console.WriteLine(message);
+        //    }
+        //}
         var reader = selectCmd.ExecuteReader(); 
         reader.Read();
         byte[] msg = Encoding.ASCII.GetBytes(reader.GetString(0));
