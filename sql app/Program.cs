@@ -33,12 +33,10 @@ public class Form1 : Form
         ip_label.Font = new Font("Calibri", 10);
         ip_label.Padding = new Padding(6);
         this.Controls.Add(ip_label);
-
         textInputTextBox = new TextBox();
         textInputTextBox.Location = new Point(110, 30);
         textInputTextBox.Size = new Size(120, 20);
         this.Controls.Add(textInputTextBox);
-
         Size = new Size(300, 150);
         button2 = new Button();
         button2.Size = new Size(60, 25);
@@ -47,28 +45,9 @@ public class Form1 : Form
         this.Controls.Add(button2);
         button2.Click += new EventHandler(license_click);
     }
-
     private void license_click(object sender, EventArgs e)
     {
-
-
-        //var ip = "127.0.0.1";
-        //MessageBox.Show("1");
-        //IPAddress address = IPAddress.Parse(ip);
-        //MessageBox.Show(ip);
-        //MessageBox.Show(address.ToString());
-        //MessageBox.Show("2");
-        //IPEndPoint endPoint = new IPEndPoint(address, 8080);
-        //MessageBox.Show(endPoint.ToString());
-        //MessageBox.Show("3");
-        //Socket Sock = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-        //MessageBox.Show("4");
-        //Sock.Connect(endPoint);
-        //MessageBox.Show(endPoint.ToString());
-        //MessageBox.Show("5");
         Console.WriteLine("Starting SQL");
-        //dbConnection.Open();
-        //Console.WriteLine("SQL Started");
         openConnection();
         using (var transaction = dbConnection.BeginTransaction())
         {
@@ -78,7 +57,6 @@ public class Form1 : Form
             transaction.Commit();
         }
         var selectCmd = dbConnection.CreateCommand();
-
         selectCmd.CommandText = "SELECT FirstName FROM Person";
         selectCmd1.CommandText = "SELECT LastName FROM Person";
         string msg1;
@@ -92,19 +70,9 @@ public class Form1 : Form
                     var message1 = reader1.GetString(0);
                     msg1 = message + " " + message1;
                     Console.WriteLine(msg1);
-                }
-            
+                }         
             }
         }
-        //{
-        //    while (reader.Read())
-        //    {
-        //        var message = reader.GetString(0);
-        //        msg1 = reader.GetString(0);
-        //       // names = new string[] { message };
-        //        Console.WriteLine(message);
-        //    }
-        //}
         var reader = selectCmd.ExecuteReader(); 
         reader.Read();
         byte[] msg = Encoding.ASCII.GetBytes(reader.GetString(0));
@@ -114,36 +82,28 @@ public class Form1 : Form
         byte[] data = new byte[recieved];
         Array.Copy(buffer, data, recieved);
         MessageBox.Show(Encoding.ASCII.GetString(data));
-        //MessageBox.Show("6");
         Sock.Close();
         closeConnection();
         return;
-
     }
-
     private void openConnection()
     {
         Console.WriteLine("Opening Connection");
-        // TODO
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
             dbConnection.Open();
             Console.WriteLine("Connection opened to:" + dbConnection.State.ToString());
         }
     }
-
     private void closeConnection()
     {
-        // TODO
         if (dbConnection.State == System.Data.ConnectionState.Open)
         {
             dbConnection.Close();
             Console.WriteLine("Connection closed to:" + dbConnection.State.ToString());
         }
     }
-
 }
-
 static class Program
 {
     [STAThread]
