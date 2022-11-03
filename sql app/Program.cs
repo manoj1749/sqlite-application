@@ -9,21 +9,14 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Numerics;
 using System.Data.SQLite;
-
 namespace appgui;
-
-
 public class Form1 : Form
 {
-    public Button button1;
     public Button button2;
     public TextBox textInputTextBox;
-    public Button textInputeButton;
     private static string dbCommand = "Data Source=DemoDB.db;Version=3;New=False;Compress=True;";
     private static SQLiteConnection dbConnection = new SQLiteConnection(dbCommand);
     private static SQLiteCommand Command = new SQLiteCommand("", dbConnection);
-    //public bool license_valid;
-    //public MainMenu Menu;
     public Form1()
     {
         Label ip_label = new Label();
