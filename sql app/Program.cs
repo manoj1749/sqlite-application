@@ -57,6 +57,7 @@ public class Form1 : Form
             transaction.Commit();
         }
         var selectCmd = dbConnection.CreateCommand();
+        var selectCmd1 = dbConnection.CreateCommand();
         selectCmd.CommandText = "SELECT FirstName FROM Person";
         selectCmd1.CommandText = "SELECT LastName FROM Person";
         string msg1;
@@ -73,16 +74,8 @@ public class Form1 : Form
                 }         
             }
         }
-        var reader = selectCmd.ExecuteReader(); 
-        reader.Read();
-        byte[] msg = Encoding.ASCII.GetBytes(reader.GetString(0));
-        Sock.Send(msg, msg.Length, 0);
-        byte[] buffer = new byte[1024];
-        int recieved = Sock.Receive(buffer);
-        byte[] data = new byte[recieved];
-        Array.Copy(buffer, data, recieved);
-        MessageBox.Show(Encoding.ASCII.GetString(data));
-        Sock.Close();
+        //var reader = selectCmd.ExecuteReader(); 
+        //reader.Read();
         closeConnection();
         return;
     }
