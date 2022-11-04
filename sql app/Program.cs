@@ -9,21 +9,14 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Numerics;
 using System.Data.SQLite;
-
 namespace appgui;
-
-
 public class Form1 : Form
 {
-    public Button button1;
     public Button button2;
     public TextBox textInputTextBox;
-    public Button textInputeButton;
     private static string dbCommand = "Data Source=DemoDB.db;Version=3;New=False;Compress=True;";
     private static SQLiteConnection dbConnection = new SQLiteConnection(dbCommand);
     private static SQLiteCommand Command = new SQLiteCommand("", dbConnection);
-    //public bool license_valid;
-    //public MainMenu Menu;
     public Form1()
     {
         Label ip_label = new Label();
@@ -47,7 +40,7 @@ public class Form1 : Form
     }
     private void license_click(object sender, EventArgs e)
     {
-        Console.WriteLine("Starting SQL");
+        MessageBox.Show("Starting SQL");
         openConnection();
         using (var transaction = dbConnection.BeginTransaction())
         {
@@ -70,7 +63,7 @@ public class Form1 : Form
                     var message = reader.GetString(0);
                     var message1 = reader1.GetString(0);
                     msg1 = message + " " + message1;
-                    Console.WriteLine(msg1);
+                    MessageBox.Show(msg1);
                 }         
             }
         }
@@ -81,11 +74,11 @@ public class Form1 : Form
     }
     private void openConnection()
     {
-        Console.WriteLine("Opening Connection");
+        MessageBox.Show("Opening Connection");
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
             dbConnection.Open();
-            Console.WriteLine("Connection opened to:" + dbConnection.State.ToString());
+            MessageBox.Show("Connection opened to:" + dbConnection.State.ToString());
         }
     }
     private void closeConnection()
@@ -93,7 +86,7 @@ public class Form1 : Form
         if (dbConnection.State == System.Data.ConnectionState.Open)
         {
             dbConnection.Close();
-            Console.WriteLine("Connection closed to:" + dbConnection.State.ToString());
+            MessageBox.Show("Connection closed to:" + dbConnection.State.ToString());
         }
     }
 }
