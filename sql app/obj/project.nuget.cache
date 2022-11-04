@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RitPJw69sYwfQZfYfaU7jCUDFNSz1f6q88hXObUblhMSIBtb33I7VGMjNqWG61aLXyF5G/OUbG1PkjwpELKazg==",
+  "dgSpecHash": "ZLOph1TxhQhd2VIzRgUHXTcltDnbb8Oj/xFLgQQZVzBa1/HrwCvYqzOLGYhKM4SM0F0D4aYVFf/TtMgzL/So5A==",
   "success": true,
-  "projectFilePath": "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj",
+  "projectFilePath": "C:\\sqlite-application\\sql app\\client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gar00\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\gar00\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

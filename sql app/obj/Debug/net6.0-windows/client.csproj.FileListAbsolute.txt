@@ -21,3 +21,33 @@ C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client
 C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.dll
 C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\refint\client.dll
 C:\sqlite-application-1\sql_server_client\client\obj\Debug\net6.0-windows\client.pdb
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\client.exe
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\client.deps.json
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\client.runtimeconfig.json
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\client.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\client.pdb
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\sqlite-application\sql app\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.csproj.AssemblyReference.cache
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.AssemblyInfoInputs.cache
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.AssemblyInfo.cs
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.csproj.CoreCompileInputs.cache
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.csproj.CopyComplete
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.dll
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\refint\client.dll
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.pdb
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.genruntimeconfig.cache
+C:\sqlite-application\sql app\obj\Debug\net6.0-windows\ref\client.dll
