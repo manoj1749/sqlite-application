@@ -1220,11 +1220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj",
+      "projectUniqueName": "C:\\sqlite-application\\sql app\\client.csproj",
       "projectName": "client",
-      "projectPath": "C:\\sqlite-application-1\\sql_server_client\\client\\client.csproj",
+      "projectPath": "C:\\sqlite-application\\sql app\\client.csproj",
       "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
-      "outputPath": "C:\\sqlite-application-1\\sql_server_client\\client\\obj\\",
+      "outputPath": "C:\\sqlite-application\\sql app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",
