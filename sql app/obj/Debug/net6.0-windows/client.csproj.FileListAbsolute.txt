@@ -51,3 +51,11 @@ C:\sqlite-application\sql app\obj\Debug\net6.0-windows\refint\client.dll
 C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.pdb
 C:\sqlite-application\sql app\obj\Debug\net6.0-windows\client.genruntimeconfig.cache
 C:\sqlite-application\sql app\obj\Debug\net6.0-windows\ref\client.dll
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.csproj.AssemblyReference.cache
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.AssemblyInfoInputs.cache
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.AssemblyInfo.cs
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.csproj.CoreCompileInputs.cache
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.dll
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\refint\client.dll
+C:\Users\manoj\Documents\GitHub\sqlite-application\sql app\obj\Debug\net6.0-windows\client.pdb

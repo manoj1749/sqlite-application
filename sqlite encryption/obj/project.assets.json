@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
+    "net6.0": {
       "EntityFramework/6.4.4": {
         "type": "package",
         "dependencies": {
@@ -30,6 +30,37 @@
         "build": {
           "buildTransitive/netcoreapp3.0/EntityFramework.props": {},
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
+        }
+      },
+      "Hazzik.System.Data.SQLite.Core/1.0.109-a1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {
+            "related": ".dll.config;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.SQLite.dll": {
+            "related": ".dll.config;.xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -133,6 +164,9 @@
             "rid": "win-x86"
           }
         }
+      },
+      "SQLite.Interop.dll/1.0.103": {
+        "type": "package"
       },
       "Stub.System.Data.SQLite.Core.NetStandard/1.0.116": {
         "type": "package",
@@ -450,6 +484,54 @@
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
       ]
     },
+    "Hazzik.System.Data.SQLite.Core/1.0.109-a1": {
+      "sha512": "geY88KZbIWtIFoZbggaSGNcY9LH8UsNTA6PztB0/tsiS1//tXO57yocvKiSWzl+xJIpzPwrMCFMv9rXyXoSFcA==",
+      "type": "package",
+      "path": "hazzik.system.data.sqlite.core/1.0.109-a1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net20/System.Data.SQLite.Core.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/System.Data.SQLite.Core.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "build/net45/System.Data.SQLite.Core.targets",
+        "build/net45/x64/SQLite.Interop.dll",
+        "build/net45/x86/SQLite.Interop.dll",
+        "build/net451/System.Data.SQLite.Core.targets",
+        "build/net451/x64/SQLite.Interop.dll",
+        "build/net451/x86/SQLite.Interop.dll",
+        "build/net46/System.Data.SQLite.Core.targets",
+        "build/net46/x64/SQLite.Interop.dll",
+        "build/net46/x86/SQLite.Interop.dll",
+        "hazzik.system.data.sqlite.core.1.0.109-a1.nupkg.sha512",
+        "hazzik.system.data.sqlite.core.nuspec",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.dll.config",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.dll.config",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.dll.config",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.dll.config",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.dll.config",
+        "lib/net46/System.Data.SQLite.xml",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.config",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x64/native/SQLite.Interop.dll",
+        "runtimes/win-x86/native/SQLite.Interop.dll"
+      ]
+    },
     "Microsoft.CSharp/4.7.0": {
       "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
@@ -673,6 +755,18 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SQLite.Interop.dll/1.0.103": {
+      "sha512": "Oi8SPxHOMzQ8a17t/qUCD3T+pmidxrdV7Aj0kUnxciO9XogHmZsNFDxla6emGtewZIuTpWJJLolD53YlHOmRKw==",
+      "type": "package",
+      "path": "sqlite.interop.dll/1.0.103",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "SQLite.Interop.dll",
+        "sqlite.interop.dll.1.0.103.nupkg.sha512",
+        "sqlite.interop.dll.nuspec"
       ]
     },
     "Stub.System.Data.SQLite.Core.NetStandard/1.0.116": {
@@ -1210,36 +1304,39 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
-      "System.Data.SQLite >= 1.0.116"
+    "net6.0": [
+      "Hazzik.System.Data.SQLite.Core >= 1.0.109-a1",
+      "SQLite.Interop.dll >= 1.0.103",
+      "System.Data.SQLite >= 1.0.116",
+      "System.Data.SQLite.Core >= 1.0.116"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\manoj\\.nuget\\packages\\": {}
+    "C:\\Users\\gar00\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj",
-      "projectName": "client",
-      "projectPath": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj",
-      "packagesPath": "C:\\Users\\manoj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\obj\\",
+      "projectUniqueName": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
+      "projectName": "sqlite",
+      "projectPath": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
+      "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
+      "outputPath": "C:\\sqlite-application-1\\sqlite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\manoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -1250,10 +1347,22 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
+          "Hazzik.System.Data.SQLite.Core": {
+            "target": "Package",
+            "version": "[1.0.109-a1, )"
+          },
+          "SQLite.Interop.dll": {
+            "target": "Package",
+            "version": "[1.0.103, )"
+          },
           "System.Data.SQLite": {
+            "target": "Package",
+            "version": "[1.0.116, )"
+          },
+          "System.Data.SQLite.Core": {
             "target": "Package",
             "version": "[1.0.116, )"
           }
@@ -1272,9 +1381,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"

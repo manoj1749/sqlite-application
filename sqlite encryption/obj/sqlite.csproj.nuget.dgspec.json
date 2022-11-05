@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj": {}
+    "C:\\sqlite-application-1\\sqlite\\sqlite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj": {
+    "C:\\sqlite-application-1\\sqlite\\sqlite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj",
-        "projectName": "client",
-        "projectPath": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\client.csproj",
-        "packagesPath": "C:\\Users\\manoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manoj\\Documents\\GitHub\\sqlite-application\\sql app\\obj\\",
+        "projectUniqueName": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
+        "projectName": "sqlite",
+        "projectPath": "C:\\sqlite-application-1\\sqlite\\sqlite.csproj",
+        "packagesPath": "C:\\Users\\gar00\\.nuget\\packages\\",
+        "outputPath": "C:\\sqlite-application-1\\sqlite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gar00\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,10 +37,22 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Hazzik.System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.109-a1, )"
+            },
+            "SQLite.Interop.dll": {
+              "target": "Package",
+              "version": "[1.0.103, )"
+            },
             "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            },
+            "System.Data.SQLite.Core": {
               "target": "Package",
               "version": "[1.0.116, )"
             }
@@ -59,9 +71,6 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
