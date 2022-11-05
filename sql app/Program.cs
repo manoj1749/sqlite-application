@@ -12,40 +12,91 @@ using System.Data.SQLite;
 namespace appgui;
 public class Form1 : Form
 {
-    public Button button2;
-    public TextBox textInputTextBox;
+    public Button button;
+    bool key_valid;
+    public  Button keybutton;
+    public TextBox ipBox;
+    public TextBox licenseKeyBox;
     private static string dbCommand = "Data Source=DemoDB.db;Version=3;New=False;Compress=True;";
     private static SQLiteConnection dbConnection = new SQLiteConnection(dbCommand);
     private static SQLiteCommand Command = new SQLiteCommand("", dbConnection);
     public Form1()
     {
+        Size = new Size(280, 200);
+
         Label ip_label = new Label();
-        ip_label.Text = "License Key";
-        ip_label.Location = new Point(25, 30);
+        ip_label.Text = "Key";
+        ip_label.Location = new Point(18, 20);
         ip_label.AutoSize = true;
         ip_label.Font = new Font("Calibri", 10);
         ip_label.Padding = new Padding(6);
         this.Controls.Add(ip_label);
-        textInputTextBox = new TextBox();
-        textInputTextBox.Location = new Point(110, 30);
-        textInputTextBox.Size = new Size(120, 20);
-        this.Controls.Add(textInputTextBox);
-        Size = new Size(300, 150);
-        button2 = new Button();
-        button2.Size = new Size(60, 25);
-        button2.Location = new Point(120, 60);
-        button2.Text = "Run";
-        this.Controls.Add(button2);
-        button2.Click += new EventHandler(license_click);
+        ipBox = new TextBox();
+        ipBox.Location = new Point(70, 23);
+        ipBox.Size = new Size(170, 90);
+        this.Controls.Add(ipBox);
+
+        keybutton = new Button();
+        keybutton.Size = new Size(60, 20);
+        keybutton.Location = new Point(120, 60);
+        keybutton.Text = "Check Key";
+        this.Controls.Add(keybutton);
+        keybutton.Click += new EventHandler(key_check);
+
+        Label license = new Label();
+        license.Text = "Data";
+        license.Location = new Point(18, 90);
+        license.AutoSize = true;
+        license.Font = new Font("Calibri", 10);
+        license.Padding = new Padding(6);
+        this.Controls.Add(license);
+        licenseKeyBox = new TextBox();
+        licenseKeyBox.Location = new Point(80, 90);
+        licenseKeyBox.Size = new Size(170, 90);
+        this.Controls.Add(licenseKeyBox);
+        
+        button = new Button();
+        button.Size = new Size(60, 20);
+        button.Location = new Point(120, 120);
+        button.Text = "Add Data";
+        this.Controls.Add(button);
+        button.Click += new EventHandler(license_click);
+
+    }
+
+    private void key_check(object sender, EventArgs e)
+    {
+        string key = ipBox.Text;
+        MessageBox.Show(ipBox.Text);
+        if (ipBox.Text == "1234567890")
+        {
+            key_valid = true;
+            MessageBox.Show("Key is valid");
+        }
+        else
+        {
+            key_valid = false;
+            MessageBox.Show("Invalid Key");
+        }
     }
     private void license_click(object sender, EventArgs e)
     {
+        if (key_valid == false)
+        {
+            MessageBox.Show("Enter a valid key");
+            return;
+        }
         MessageBox.Show("Starting SQL");
         openConnection();
+        string input = licenseKeyBox.Text;
+        string[] values = input.Split(' ');
+        string FirstName = values[0];
+        string LastName = values[1];
+        MessageBox.Show(FirstName+" "+LastName);
         using (var transaction = dbConnection.BeginTransaction())
         {
             var insertCmd = dbConnection.CreateCommand();
-            insertCmd.CommandText = "INSERT INTO Person VALUES('LAGUNITAS','IPA')";
+            insertCmd.CommandText = "INSERT INTO Person VALUES('"+FirstName+"','"+LastName+"')";
             insertCmd.ExecuteNonQuery();
             transaction.Commit();
         }
