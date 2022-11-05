@@ -78,7 +78,7 @@ public class Form1 : Form
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
             dbConnection.Open();
-            MessageBox.Show("Connection opened to:" + dbConnection.State.ToString());
+            //MessageBox.Show("Connection opened to:" + dbConnection.State.ToString());
         }
     }
     private void closeConnection()
@@ -86,7 +86,7 @@ public class Form1 : Form
         if (dbConnection.State == System.Data.ConnectionState.Open)
         {
             dbConnection.Close();
-            MessageBox.Show("Connection closed to:" + dbConnection.State.ToString());
+            //MessageBox.Show("Connection closed to:" + dbConnection.State.ToString());
         }
     }
 }
