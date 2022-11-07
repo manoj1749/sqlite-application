@@ -13,7 +13,7 @@ namespace appgui;
 public class Form1 : Form
 {
     public Button button;
-    bool key_valid;
+    bool key_valid = false;
     public  Button keybutton;
     public TextBox ipBox;
     public TextBox licenseKeyBox;
@@ -66,8 +66,13 @@ public class Form1 : Form
 
     private void key_check(object sender, EventArgs e)
     {
+        if (ipBox.Text == "")
+        {
+            MessageBox.Show("Please enter a key");
+            return;
+        }
         string key = ipBox.Text;
-        MessageBox.Show(ipBox.Text);
+        //MessageBox.Show(ipBox.Text);
         if (ipBox.Text == "1234567890")
         {
             key_valid = true;
@@ -81,7 +86,12 @@ public class Form1 : Form
     }
     private void license_click(object sender, EventArgs e)
     {
-        if (key_valid == false)
+        if (ipBox.Text == "")
+        {
+            MessageBox.Show("Please enter a key");
+            return;
+        }
+        else if (key_valid == false)
         {
             MessageBox.Show("Enter a valid key");
             return;
