@@ -98,7 +98,7 @@ public class Form1 : Form
         }
         MessageBox.Show("Starting SQL");
         openConnection();
-
+        dbConnection.Open();
         string input = licenseKeyBox.Text;
         string[] values = input.Split(' ');
         string FirstName = values[0];
@@ -139,7 +139,6 @@ public class Form1 : Form
         MessageBox.Show("Opening Connection");
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
-            dbConnection.Open();
             string sql = "PRAGMA lic='77523-009-0000007-72328';";
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
