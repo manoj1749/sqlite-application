@@ -14,7 +14,7 @@ public class Form1 : Form
 {
     public Button button;
     bool key_valid = false;
-    public  Button keybutton;
+    public Button keybutton;
     public TextBox ipBox;
     public TextBox licenseKeyBox;
     private static string dbCommand = "Data Source=DemoDB.db;Version=3;New=False;Compress=True;";
@@ -54,7 +54,7 @@ public class Form1 : Form
         licenseKeyBox.Location = new Point(80, 90);
         licenseKeyBox.Size = new Size(170, 90);
         this.Controls.Add(licenseKeyBox);
-        
+
         button = new Button();
         button.Size = new Size(60, 20);
         button.Location = new Point(120, 120);
@@ -98,15 +98,16 @@ public class Form1 : Form
         }
         MessageBox.Show("Starting SQL");
         openConnection();
+
         string input = licenseKeyBox.Text;
         string[] values = input.Split(' ');
         string FirstName = values[0];
         string LastName = values[1];
-        MessageBox.Show(FirstName+" "+LastName);
+        MessageBox.Show(FirstName + " " + LastName);
         using (var transaction = dbConnection.BeginTransaction())
         {
             var insertCmd = dbConnection.CreateCommand();
-            insertCmd.CommandText = "INSERT INTO Person VALUES('"+FirstName+"','"+LastName+"')";
+            insertCmd.CommandText = "INSERT INTO Person VALUES('" + FirstName + "','" + LastName + "')";
             insertCmd.ExecuteNonQuery();
             transaction.Commit();
         }
@@ -125,7 +126,7 @@ public class Form1 : Form
                     var message1 = reader1.GetString(0);
                     msg1 = message + " " + message1;
                     MessageBox.Show(msg1);
-                }         
+                }
             }
         }
         //var reader = selectCmd.ExecuteReader(); 
@@ -139,6 +140,16 @@ public class Form1 : Form
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
             dbConnection.Open();
+            string sql = "PRAGMA lic='77523-009-0000007-72328';";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            sql = "PRAGMA rekey='abc123';";
+            command = new SQLiteCommand(sql, dbConnection);
+            command.ExecuteNonQuery();
+
+            MessageBox.Show("SQlite db encrypted", "My Application", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             //MessageBox.Show("Connection opened to:" + dbConnection.State.ToString());
         }
     }
