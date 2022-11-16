@@ -12,6 +12,8 @@ using System.Data.SQLite;
 namespace appgui;
 public class Form1 : Form
 {
+    string sql;
+    SQLiteCommand command;
     public Button button;
     bool key_valid = false;
     public Button keybutton;
@@ -54,7 +56,6 @@ public class Form1 : Form
         licenseKeyBox.Location = new Point(80, 90);
         licenseKeyBox.Size = new Size(170, 90);
         this.Controls.Add(licenseKeyBox);
-
         button = new Button();
         button.Size = new Size(60, 20);
         button.Location = new Point(120, 120);
@@ -76,6 +77,7 @@ public class Form1 : Form
         if (ipBox.Text == "1234567890")
         {
             key_valid = true;
+            enCrypt();
             MessageBox.Show("Key is valid");
         }
         else
@@ -98,7 +100,6 @@ public class Form1 : Form
         }
         MessageBox.Show("Starting SQL");
         openConnection();
-        dbConnection.Open();
         string input = licenseKeyBox.Text;
         string[] values = input.Split(' ');
         string FirstName = values[0];
@@ -128,27 +129,44 @@ public class Form1 : Form
                     MessageBox.Show(msg1);
                 }
             }
+            enCrypt();
         }
         //var reader = selectCmd.ExecuteReader(); 
         //reader.Read();
         closeConnection();
         return;
     }
+
+    private void enCrypt()
+    {
+        sql = "PRAGMA lic='77523-009-0000007-72328';";
+        command = new SQLiteCommand(sql, dbConnection);
+        command.ExecuteNonQuery();
+
+        sql = "PRAGMA rekey='abc123';";
+        command = new SQLiteCommand(sql, dbConnection);
+        command.ExecuteNonQuery();
+    }
+    private void deCrypt()
+    {
+        sql = "PRAGMA rekey='abc123';";
+        command = new SQLiteCommand(sql, dbConnection);
+        command.ExecuteNonQuery();
+
+        sql = "PRAGMA lic='77523-009-0000007-72328';";
+        command = new SQLiteCommand(sql, dbConnection);
+        command.ExecuteNonQuery();
+        //now you have all access to encrypted data.db
+        sql = "PRAGMA lic='';";
+        command = new SQLiteCommand(sql, dbConnection);
+        command.ExecuteNonQuery();
+    }
     private void openConnection()
     {
         MessageBox.Show("Opening Connection");
         if (dbConnection.State == System.Data.ConnectionState.Closed)
         {
-            string sql = "PRAGMA lic='77523-009-0000007-72328';";
-            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
-            command.ExecuteNonQuery();
-
-            sql = "PRAGMA rekey='abc123';";
-            command = new SQLiteCommand(sql, dbConnection);
-            command.ExecuteNonQuery();
-
-            MessageBox.Show("SQlite db encrypted", "My Application", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            dbConnection.Open();
             //MessageBox.Show("Connection opened to:" + dbConnection.State.ToString());
         }
     }
